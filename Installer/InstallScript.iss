@@ -23,9 +23,9 @@ DisableProgramGroupPage=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
-OutputDir=C:\Users\Alan\Documents\GitHub\CMM\Installer
-OutputBaseFilename=CMMInstaller
-SetupIconFile=C:\Users\Alan\Documents\GitHub\CMM\Installer\icon.ico 
+OutputDir=.\
+OutputBaseFilename=Installer
+SetupIconFile=.\icon.ico 
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -37,10 +37,10 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Alan\Documents\GitHub\CMM\FinalAppData\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Alan\Documents\GitHub\CMM\FinalAppData\GuiStuff\*"; DestDir: "{app}\GuiStuff"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Alan\Documents\GitHub\CMM\FinalAppData\sqlStuff\*"; DestDir: "{app}\sqlStuff"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Alan\Documents\GitHub\CMM\FinalAppData\Resources\*"; DestDir: "{app}\Resources"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\FinalAppData\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\FinalAppData\GuiStuff\*"; DestDir: "{app}\GuiStuff"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\FinalAppData\sqlStuff\*"; DestDir: "{app}\sqlStuff"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\FinalAppData\Resources\*"; DestDir: "{app}\Resources"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
