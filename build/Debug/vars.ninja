@@ -1,0 +1,7 @@
+inc = -I ./include %WLIBPATH64%  -I C:/Libraries/_MyLibraries/GLIB/include -l GLIB -I C:/SQLITE/lib
+objDir = ./bin/Debug/obj
+compiler = cmd /c clang++
+CXXFLAGS = -std=c++17
+OPTIONS = -c -g -Wno-unused-command-line-argument
+DEFINES = -D YEAR=2022 -D MON=12 -D DAY=17
+compilerFlags = $OPTIONS $CXXFLAGS $DEFINES

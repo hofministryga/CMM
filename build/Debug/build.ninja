@@ -1,0 +1,24 @@
+# Processor Type set to UNKNOWN TYPE
+# Include variables for this build
+include ./build/Debug/vars.ninja
+
+## for getting object files
+## This also gets dependencies
+rule buildToObject
+   deps = gcc
+   depfile = $out.d
+   command = $compiler $compilerFlags $inc $in -o $out -MMD -MF $out.d
+
+## build all of the objects and the executable
+build $objDir/DBFunctions.o: buildToObject src/DBFunctions.cpp
+build $objDir/Functions.o: buildToObject src/Functions.cpp
+build $objDir/InitDisposeFunctions.o: buildToObject src/InitDisposeFunctions.cpp
+build $objDir/InitHeader.o: buildToObject src/InitHeader.cpp
+build $objDir/InitLeftMain.o: buildToObject src/InitLeftMain.cpp
+build $objDir/InitRightMain.o: buildToObject src/InitRightMain.cpp
+build $objDir/LogFunctions.o: buildToObject src/LogFunctions.cpp
+build $objDir/source.o: buildToObject src/source.cpp
+build $objDir/SqliteDatabase.o: buildToObject src/SqliteDatabase.cpp
+build $objDir/UpdateFunctions.o: buildToObject src/UpdateFunctions.cpp
+build $objDir/Updater.o: buildToObject src/Updater.cpp
+build $objDir/UTFConversion.o: buildToObject src/UTFConversion.cpp

@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Debug with Clang",
+			"type": "shell",
+			"command": "${workspaceFolder}/build/Debug/build.bat",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Release with Clang",
+			"type": "shell",
+			"command": "${workspaceFolder}/build/Release/build.bat",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		}
+	]
+}
