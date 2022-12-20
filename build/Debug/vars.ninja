@@ -3,5 +3,5 @@ objDir = ./bin/Debug/obj
 compiler = cmd /c clang++
 CXXFLAGS = -std=c++17
 OPTIONS = -c -g -Wno-unused-command-line-argument
-DEFINES = -D YEAR=2022 -D MON=12 -D DAY=18
+DEFINES = -D YEAR=2022 -D MON=12 -D DAY=21
 compilerFlags = $OPTIONS $CXXFLAGS $DEFINES

@@ -12,6 +12,7 @@ void setBuildTime()
 
 void checkUpdate()
 {
+    setBuildTime();
 	checkForUpdate(buildTime, "hofministryga", "CMM");
     // checkForUpdate(buildTime, "https://api.github.com/repos/hofministryga/CMM/releases/latest");
 }

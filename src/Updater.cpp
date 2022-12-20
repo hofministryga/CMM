@@ -219,6 +219,7 @@ void checkJSONStuff(time_t buildTime, std::string owner, std::string repo)
     
     d.update();
     d.deleteResource( d.getReferenceLocation("temp.json") );
+    d.deleteResource( d.getReferenceLocation("Installer.exe") );
     if(curlAvaliable)
     {
         int error = -1;
