@@ -3,6 +3,8 @@
 void setBuildTime()
 {
     tm actualBuildTime;
+    memset(&actualBuildTime, 0, sizeof(tm));
+    
     actualBuildTime.tm_year = YEAR-1900;
     actualBuildTime.tm_mon = MON-1;
     actualBuildTime.tm_mday = DAY;
@@ -12,7 +14,6 @@ void setBuildTime()
 
 void checkUpdate()
 {
-    setBuildTime();
 	checkForUpdate(buildTime, "hofministryga", "CMM");
     // checkForUpdate(buildTime, "https://api.github.com/repos/hofministryga/CMM/releases/latest");
 }
